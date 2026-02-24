@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=accueil.html">
+    <meta name="description" content="COOL SERVICES Agence Immobilière - Location, vente terrain, gestion immobilier, BTP à Korhogo, Côte d'Ivoire">
+    <title>COOL SERVICES Agence Immobilière — Korhogo, Côte d'Ivoire</title><style>
+    /* Style temporaire pendant redirection */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1B3A6B 0%, #2557A7 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #FFFFFF;
+    }    .loader-container {
+        text-align: center;
+        padding: 40px;
+    }    .logo-placeholder {
+        width: 180px;
+        height: 180px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        margin: 0 auto 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }    .logo-placeholder img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+    }    h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+    }    p {
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 30px;
+    }    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top-color: #E8600A;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }    .fallback-link {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }    .fallback-link a {
+        color: #E8600A;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 12px 30px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }    .fallback-link a:hover {
+        background: #F28C38;
+        color: #FFFFFF;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(232, 96, 10, 0.4);
+    }    /* Responsive */
+    @media (max-width: 600px) {
+        .logo-placeholder {
+            width: 140px;
+            height: 140px;
+        }        h1 {
+            font-size: 24px;
+        }        p {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="logo-placeholder">
+            <!-- Logo CSAI sera affiché ici -->
+            <img src="logo/logo-csai.png" alt="COOL SERVICES Logo" onerror="this.style.display='none'">
+        </div>    <h1>COOL SERVICES</h1>
+    <p>Agence Immobilière Premium — Korhogo</p>    <div class="spinner"></div>    <div class="fallback-link">
+        <a href="accueil.html">Accéder au site</a>
+    </div>
+</div><script>
+    // Redirection JavaScript de secours si meta refresh échoue
+    setTimeout(function() {
+        window.location.href = 'accueil.html';
+    }, 100);
+</script>
+</body>
+</html>
