@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=accueil.html">
     <meta name="description" content="COOL SERVICES Agence Immobilière - Location, vente terrain, gestion immobilier, BTP à Korhogo, Côte d'Ivoire">
     <title>COOL SERVICES Agence Immobilière — Korhogo, Côte d'Ivoire</title>
     
@@ -74,29 +73,16 @@
             to { transform: rotate(360deg); }
         }
         
-        .fallback-link {
+        .status {
             margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .fallback-link a {
-            color: #E8600A;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            padding: 12px 30px;
-            background: #FFFFFF;
-            border-radius: 8px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .fallback-link a:hover {
-            background: #F28C38;
-            color: #FFFFFF;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(232, 96, 10, 0.4);
+        .status p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
         }
         
         @media (max-width: 600px) {
@@ -126,15 +112,9 @@
         
         <div class="spinner"></div>
         
-        <div class="fallback-link">
-            <a href="accueil.html">Accéder au site</a>
+        <div class="status">
+            <p>Site en développement — Assets en préparation</p>
         </div>
     </div>
-    
-    <script>
-        setTimeout(function() {
-            window.location.href = 'accueil.html';
-        }, 100);
-    </script>
 </body>
 </html>
