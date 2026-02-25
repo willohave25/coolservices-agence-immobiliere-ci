@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos CSAI - Agence Korhogo Premium</title>
+  <meta name="description" content="À propos de Cool Services Agence Immobilière (CSAI) à Korhogo, Côte d'Ivoire : histoire, expertise RCCM, gérant Coulibaly Adama. Votre partenaire immobilier Korhogo !">
+  <meta name="keywords" content="à propos CSAI, Cool Services Korhogo, agence immobilière Korhogo, Côte d'Ivoire, Coulibaly Adama, RCCM Korhogo">
+  <meta name="author" content="Cool Services Agence Immobilière — CSAI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.coolservicesagenceimmobiliere-ci.com/a-propos.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CI">
+  <meta property="og:site_name" content="CSAI — Cool Services Agence Immobilière">
+  <meta property="og:title" content="À Propos CSAI - Agence Korhogo Premium">
+  <meta property="og:description" content="À propos de Cool Services Agence Immobilière (CSAI) à Korhogo, Côte d'Ivoire : histoire, expertise RCCM, gérant Coulibaly Adama. Votre partenaire immobilier Korhogo !">
+  <meta property="og:image" content="https://www.coolservicesagenceimmobiliere-ci.com/images/hero/hero-a-propos.jpg">
+  <meta property="og:url" content="https://www.coolservicesagenceimmobiliere-ci.com/a-propos.html">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="À Propos CSAI - Agence Korhogo Premium">
+  <meta name="twitter:description" content="À propos de Cool Services Agence Immobilière (CSAI) à Korhogo, Côte d'Ivoire : histoire, expertise RCCM, gérant Coulibaly Adama. Votre partenaire immobilier Korhogo !">
+  <meta name="twitter:image" content="https://www.coolservicesagenceimmobiliere-ci.com/images/hero/hero-a-propos.jpg">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Cool Services Agence Immobilière",
+    "alternateName": "CSAI",
+    "url": "https://www.coolservicesagenceimmobiliere-ci.com",
+    "telephone": ["+2250574242851","+2250787295404","+2252733759694"],
+    "email": "contact@coolservicesagenceimmobiliere-ci.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Quartier 14, Rotonde en allant vers le CHR",
+      "addressLocality": "Korhogo",
+      "addressCountry": "CI"
+    },
+    "founder": { "@type": "Person", "name": "Coulibaly Adama" },
+    "foundingDate": "2021",
+    "legalName": "Cool Services Agence Immobilière SARL"
+  }
+  </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-autoscroll="true" data-current-page="a-propos.html" data-next-page="portfolio-realisations.html">
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html" aria-label="CSAI — Accueil">
+          <div class="logo-text">
+            CSAI
+            <span>Cool Services Agence Immobilière</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-desktop" role="navigation" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a href="#" class="nav-dropdown-trigger">Nos Services</a>
+            <ul class="nav-dropdown">
+              <li><a href="location-maison.html"><img src="images/icons/icone-location-maison.svg" alt="" width="20" height="20"> Location Maison</a></li>
+              <li><a href="gestion-maison.html"><img src="images/icons/icone-gestion-maison.svg" alt="" width="20" height="20"> Gestion Maison</a></li>
+              <li><a href="vente-terrain.html"><img src="images/icons/icone-vente-terrain.svg" alt="" width="20" height="20"> Vente Terrain</a></li>
+              <li><a href="vente-vehicule.html"><img src="images/icons/icone-vente-vehicule.svg" alt="" width="20" height="20"> Vente Véhicule</a></li>
+              <li><a href="lotissement.html"><img src="images/icons/icone-lotissement.svg" alt="" width="20" height="20"> Lotissement</a></li>
+              <li><a href="batiment-btp.html"><img src="images/icons/icone-batiment-btp.svg" alt="" width="20" height="20"> BTP &amp; Bâtiment</a></li>
+              <li><a href="traitement-devise-plan.html"><img src="images/icons/icone-traitement-plan.svg" alt="" width="20" height="20"> Devise &amp; Plan</a></li>
+              <li><a href="achat-vente-ferraille.html"><img src="images/icons/icone-ferraille.svg" alt="" width="20" height="20"> Ferraille</a></li>
+              <li><a href="prestations-diverses.html"><img src="images/icons/icone-prestations.svg" alt="" width="20" height="20"> Prestations Diverses</a></li>
+            </ul>
+          </li>
+          <li><a href="a-propos.html" class="active">À Propos</a></li>
+          <li><a href="portfolio-realisations.html">Portfolio</a></li>
+          <li><a href="temoignages.html">Témoignages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn-header-cta">Nous Contacter</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" aria-hidden="true"></div>
+
+  <nav class="mobile-drawer" role="navigation" aria-label="Menu mobile">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <button class="mobile-submenu-toggle">Nos Services <span class="arrow">▼</span></button>
+        <ul class="mobile-submenu">
+          <li><a href="location-maison.html">Location Maison</a></li>
+          <li><a href="gestion-maison.html">Gestion Maison</a></li>
+          <li><a href="vente-terrain.html">Vente Terrain</a></li>
+          <li><a href="vente-vehicule.html">Vente Véhicule</a></li>
+          <li><a href="lotissement.html">Lotissement</a></li>
+          <li><a href="batiment-btp.html">BTP &amp; Bâtiment</a></li>
+          <li><a href="traitement-devise-plan.html">Devise &amp; Plan</a></li>
+          <li><a href="achat-vente-ferraille.html">Ferraille</a></li>
+          <li><a href="prestations-diverses.html">Prestations Diverses</a></li>
+        </ul>
+      </li>
+      <li><a href="a-propos.html" class="active">À Propos</a></li>
+      <li><a href="portfolio-realisations.html">Portfolio</a></li>
+      <li><a href="temoignages.html">Témoignages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-mobile-cta">Nous Contacter</a>
+  </nav>
+
+  <!-- ========== HERO PAGE ========== -->
+  <section class="page-hero" data-autoscroll-section>
+    <div class="hero-bg">
+      <picture>
+        <source srcset="images/hero/hero-a-propos.webp" type="image/webp">
+        <img src="images/hero/hero-a-propos.jpg" alt="À propos CSAI agence immobilière Korhogo Côte d'Ivoire Coulibaly Adama" width="1920" height="900">
+      </picture>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span class="sep">›</span>
+          <span>À Propos</span>
+        </nav>
+        <h1>À Propos de Cool Services Agence Immobilière</h1>
+        <p class="hero-subtitle">Fondée par Coulibaly Adama, Cool Services Agence Immobilière (CSAI) est l'agence immobilière premium de Korhogo, Côte d'Ivoire.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-primary btn-lg">Rencontrez-Nous</a>
+          <a href="https://wa.me/2250574242851" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">WhatsApp Direct</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INTRO ========== -->
+  <section class="section" data-autoscroll-section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="overline">Notre Histoire</span>
+        <h2>Notre Histoire et Nos Valeurs</h2>
+        <span class="gold-line"></span>
+      </div>
+      <div class="reveal" style="max-width:800px;margin:0 auto;">
+        <p>Fondée par Coulibaly Adama, Cool Services Agence Immobilière (CSAI) est l'agence immobilière premium de Korhogo, Côte d'Ivoire. Capital 5.000.000 FCFA, RCCM CIKGO-2021-B-1262 du 15/09/2021, adresse Quartier 14 Rotonde CHR.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 1 — Passion ========== -->
+  <section class="section section-alt content-section" data-autoscroll-section>
+    <div class="container">
+      <div class="content-grid">
+        <div class="reveal-left">
+          <div class="content-image">
+            <picture>
+              <source srcset="images/equipe/gerant-coulibaly-adama.webp" type="image/webp">
+              <img src="images/equipe/gerant-coulibaly-adama.jpg" alt="Gérant Coulibaly Adama CSAI agence immobilière Korhogo" loading="lazy" width="640" height="480">
+            </picture>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span class="overline" style="color:var(--gold);font-size:0.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:var(--space-xs);">Depuis 2021</span>
+          <h2>Passionnés par l'Immobilier à Korhogo</h2>
+          <p>Passionnés par l'immobilier Korhogo et en Côte d'Ivoire, nous bâtissons la confiance depuis 2021 avec services variés.</p>
+          <a href="portfolio-realisations.html" class="btn btn-outline">Voir Nos Réalisations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2 — Valeurs ========== -->
+  <section class="section content-section" data-autoscroll-section>
+    <div class="container">
+      <div class="content-grid reverse">
+        <div class="reveal-left">
+          <div class="content-image">
+            <picture>
+              <source srcset="images/equipe/valeurs-equipe.webp" type="image/webp">
+              <img src="images/equipe/valeurs-equipe.jpg" alt="Valeurs équipe CSAI Korhogo excellence proximité légalité" loading="lazy" width="640" height="480">
+            </picture>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span class="overline" style="color:var(--gold);font-size:0.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:var(--space-xs);">Nos Valeurs</span>
+          <h2>Excellence, Proximité et Légalité</h2>
+          <p>Valeurs : excellence, proximité, légalité. Équipe dédiée pour location maison Korhogo et plus.</p>
+          <a href="temoignages.html" class="btn btn-outline">Témoignages Clients</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERIE ÉQUIPE ========== -->
+  <section class="section section-alt" data-autoscroll-section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="overline">Notre Équipe</span>
+        <h2>L'Équipe CSAI</h2>
+        <span class="gold-line"></span>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal delay-1">
+          <picture>
+            <source srcset="images/equipe/gerant-coulibaly-adama.webp" type="image/webp">
+            <img src="images/equipe/gerant-coulibaly-adama.jpg" alt="Gérant Coulibaly Adama fondateur CSAI Korhogo" loading="lazy" width="480" height="360">
+          </picture>
+        </div>
+        <div class="gallery-item reveal delay-2">
+          <picture>
+            <source srcset="images/equipe/equipe-complete-csai.webp" type="image/webp">
+            <img src="images/equipe/equipe-complete-csai.jpg" alt="Équipe complète CSAI agence immobilière Korhogo" loading="lazy" width="480" height="360">
+          </picture>
+        </div>
+        <div class="gallery-item reveal delay-3">
+          <picture>
+            <source srcset="images/equipe/bureau-csai-korhogo.webp" type="image/webp">
+            <img src="images/equipe/bureau-csai-korhogo.jpg" alt="Bureau CSAI Korhogo Quartier 14 agence immobilière" loading="lazy" width="480" height="360">
+          </picture>
+        </div>
+        <div class="gallery-item reveal delay-4">
+          <picture>
+            <source srcset="images/equipe/valeurs-equipe.webp" type="image/webp">
+            <img src="images/equipe/valeurs-equipe.jpg" alt="Valeurs équipe CSAI Korhogo professionnalisme" loading="lazy" width="480" height="360">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3 — Rejoignez ========== -->
+  <section class="section" data-autoscroll-section>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="overline">Succès Local</span>
+        <h2>Rejoignez Notre Succès Local</h2>
+        <span class="gold-line"></span>
+      </div>
+      <div class="reveal" style="max-width:800px;margin:0 auto;text-align:center;">
+        <p>Rejoignez notre succès local.</p>
+        <div style="margin-top:var(--space-md);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-sm);">
+          <a href="contact.html" class="btn btn-primary">Rencontrez-Nous</a>
+          <a href="https://wa.me/2250574242851" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp Direct</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="cta-section" data-autoscroll-section>
+    <div class="container">
+      <h2 class="reveal">Découvrez l'Équipe CSAI à Korhogo</h2>
+      <p class="reveal">Excellence, proximité, légalité depuis 2021. Quartier 14, Rotonde vers CHR.</p>
+      <div class="cta-buttons reveal">
+        <a href="contact.html" class="btn btn-primary btn-lg">Contactez-nous Maintenant</a>
+        <a href="tel:+2250574242851" class="btn btn-secondary btn-lg">+225 05 74 24 28 51</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <h4>CSAI</h4>
+          <p>Cool Services Agence Immobilière — votre partenaire premium à Korhogo, Côte d'Ivoire. RCCM CIKGO-2021-B-1262. Capital 5.000.000 FCFA.</p>
+          <div class="footer-social">
+            <a href="https://web.facebook.com/coolserviceagenceimobiliere/?locale2=cy_GB&_rdc=1&_rdr" target="_blank" rel="noopener" aria-label="Facebook CSAI"><img src="images/icons/icone-facebook.svg" alt="Facebook" width="18" height="18"></a>
+            <a href="https://www.instagram.com/p/DTDx4Y4Dt9P/" target="_blank" rel="noopener" aria-label="Instagram CSAI"><img src="images/icons/icone-instagram.svg" alt="Instagram" width="18" height="18"></a>
+            <a href="https://www.tiktok.com/tag/coolservice" target="_blank" rel="noopener" aria-label="TikTok CSAI"><img src="images/icons/icone-tiktok.svg" alt="TikTok" width="18" height="18"></a>
+            <a href="https://wa.me/2250574242851" target="_blank" rel="noopener" aria-label="WhatsApp CSAI"><img src="images/icons/icone-whatsapp.svg" alt="WhatsApp" width="18" height="18"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Nos Services</h4>
+          <ul class="footer-links">
+            <li><a href="location-maison.html">Location Maison</a></li>
+            <li><a href="gestion-maison.html">Gestion Maison</a></li>
+            <li><a href="vente-terrain.html">Vente Terrain</a></li>
+            <li><a href="vente-vehicule.html">Vente Véhicule</a></li>
+            <li><a href="lotissement.html">Lotissement</a></li>
+            <li><a href="batiment-btp.html">BTP &amp; Bâtiment</a></li>
+            <li><a href="traitement-devise-plan.html">Devise &amp; Plan</a></li>
+            <li><a href="achat-vente-ferraille.html">Ferraille</a></li>
+            <li><a href="prestations-diverses.html">Prestations Diverses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>L'Agence</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À Propos</a></li>
+            <li><a href="portfolio-realisations.html">Portfolio</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+            <li><a href="reseaux-sociaux.html">Réseaux Sociaux</a></li>
+            <li><a href="localisation.html">Localisation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <img src="images/icons/icone-location-pin.svg" alt="" width="18" height="18">
+            <span>Quartier 14, Rotonde vers CHR, Korhogo, Côte d'Ivoire</span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="images/icons/icone-phone.svg" alt="" width="18" height="18">
+            <span>
+              <a href="tel:+2250574242851">+225 05 74 24 28 51</a><br>
+              <a href="tel:+2250787295404">+225 07 87 29 54 04</a><br>
+              <a href="tel:+2252733759694">+225 27 33 75 96 94</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <img src="images/icons/icone-email.svg" alt="" width="18" height="18">
+            <a href="mailto:contact@coolservicesagenceimmobiliere-ci.com">contact@coolservices<wbr>agenceimmobiliere-ci.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Cool Services Agence Immobilière (CSAI) — Tous droits réservés.</span>
+        <div class="footer-legal-links">
+          <a href="mentions-legales.html">Mentions Légales</a>
+          <a href="cgv.html">CGV</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auto-scroll.js"></script>
+</body>
+</html>
