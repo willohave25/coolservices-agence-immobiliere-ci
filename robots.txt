@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/icons/
+
+Sitemap: https://www.coolservicesagenceimmobiliere-ci.com/sitemap.xml
