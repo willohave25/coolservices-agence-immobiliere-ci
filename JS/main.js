@@ -17,12 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* ----------------------------------------
        Hamburger menu mobile — supporte les 2 structures HTML
+       Structure A (pages services): .mobile-drawer > .mobile-nav-list (pas de .drawer-content)
+       Structure B (pages legales): .mobile-drawer > .drawer-overlay + .drawer-content
        ---------------------------------------- */
     var hamburger = document.querySelector('.hamburger');
     var drawer = document.querySelector('.mobile-drawer');
     var overlay = document.querySelector('.mobile-overlay');
     var drawerOverlay = document.getElementById('drawerOverlay');
     var drawerClose = document.getElementById('drawerClose');
+    var drawerContent = drawer ? drawer.querySelector('.drawer-content') : null;
+
+    /* Identifier la structure pour le CSS */
+    if (drawer && !drawerContent) {
+        drawer.classList.add('drawer-simple');
+    }
 
     function openMobile() {
         if (drawer) {
@@ -31,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (overlay) overlay.classList.add('active');
         if (drawerOverlay) drawerOverlay.classList.add('active');
-        if (hamburger) hamburger.classList.add('active');
+        if (hamburger) {
+            hamburger.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
         document.body.style.overflow = 'hidden';
     }
 
@@ -42,7 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (overlay) overlay.classList.remove('active');
         if (drawerOverlay) drawerOverlay.classList.remove('active');
-        if (hamburger) hamburger.classList.remove('active');
+        if (hamburger) {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
         document.body.style.overflow = '';
     }
 
@@ -66,6 +80,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (drawerClose) {
         drawerClose.addEventListener('click', closeMobile);
+    }
+
+    /* Fermer drawer sur lien clique (sauf sous-menu toggle) */
+    if (drawer) {
+        drawer.querySelectorAll('a:not(.mobile-submenu-toggle):not(.drawer-dropdown-toggle)').forEach(function(link) {
+            if (!link.getAttribute('href') || link.getAttribute('href') === '#') return;
+            link.addEventListener('click', closeMobile);
+        });
     }
 
     /* Sous-menu mobile toggle — ancienne structure */
@@ -124,10 +146,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
         reveals.forEach(function(el) {
             revealObserver.observe(el);
+        });
+    } else {
+        /* Fallback — afficher tout si pas d'IntersectionObserver */
+        reveals.forEach(function(el) {
+            el.classList.add('visible');
         });
     }
 
