@@ -177,6 +177,11 @@ document.addEventListener('DOMContentLoaded', function() {
        Validation formulaire contact
        ---------------------------------------- */
     initContactForm();
+
+    /* ----------------------------------------
+       Carrousel flyers actualites
+       ---------------------------------------- */
+    initFlyersCarousel();
 });
 
 
@@ -361,4 +366,131 @@ function initContactForm() {
             }, 4000);
         }
     });
+}
+
+
+/* ============================================
+   Carrousel flyers actualites — defilement auto
+   ============================================ */
+function initFlyersCarousel() {
+    var track = document.getElementById('flyersTrack');
+    if (!track) return;
+
+    var slides = track.querySelectorAll('.flyer-slide');
+    var totalSlides = slides.length;
+    if (totalSlides === 0) return;
+
+    var currentIndex = 0;
+    var autoplayInterval = null;
+    var autoplayDelay = 7000;
+    var isHovered = false;
+
+    var prevBtn = document.querySelector('.flyer-prev');
+    var nextBtn = document.querySelector('.flyer-next');
+    var dots = document.querySelectorAll('.flyer-dot');
+
+    /* Aller a un slide precis */
+    function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+        updateDots();
+    }
+
+    /* Mettre a jour les dots */
+    function updateDots() {
+        dots.forEach(function(dot, i) {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    /* Navigation fleches */
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            goToSlide(currentIndex - 1);
+            resetAutoplay();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            goToSlide(currentIndex + 1);
+            resetAutoplay();
+        });
+    }
+
+    /* Navigation dots */
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            var index = parseInt(dot.dataset.index, 10);
+            goToSlide(index);
+            resetAutoplay();
+        });
+    });
+
+    /* Autoplay */
+    function startAutoplay() {
+        stopAutoplay();
+        autoplayInterval = setInterval(function() {
+            if (!isHovered) {
+                goToSlide(currentIndex + 1);
+            }
+        }, autoplayDelay);
+    }
+
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+    }
+
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
+    /* Pause au survol et au touch */
+    var carousel = track.closest('.flyers-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', function() {
+            isHovered = true;
+        });
+        carousel.addEventListener('mouseleave', function() {
+            isHovered = false;
+        });
+        carousel.addEventListener('touchstart', function() {
+            isHovered = true;
+        }, { passive: true });
+        carousel.addEventListener('touchend', function() {
+            setTimeout(function() { isHovered = false; }, 3000);
+        }, { passive: true });
+    }
+
+    /* Swipe mobile */
+    var touchStartX = 0;
+    var touchEndX = 0;
+
+    if (carousel) {
+        carousel.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            var diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    goToSlide(currentIndex - 1);
+                }
+                resetAutoplay();
+            }
+        }, { passive: true });
+    }
+
+    /* Demarrer autoplay */
+    startAutoplay();
 }
