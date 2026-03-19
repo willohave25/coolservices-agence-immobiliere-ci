@@ -2287,3 +2287,376 @@ p {
     white-space: nowrap;
     border: 0;
 }
+/* ============================================
+   ACTUALITÉS — Styles additionnels
+   Ajouter à la fin de css/style.css
+   W2K-Digital 2025
+   ============================================ */
+
+/* --- Carrousel flyers --- */
+.flyers-carousel {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.flyers-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.flyer-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.flyer-slide picture,
+.flyer-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flèches navigation carrousel */
+.flyer-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-dark, #1a1a1a);
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.flyer-nav:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.flyer-prev {
+  left: 12px;
+}
+
+.flyer-next {
+  right: 12px;
+}
+
+/* Dots navigation carrousel */
+.flyers-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.flyer-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary, #c5963a);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0;
+}
+
+.flyer-dot.active,
+.flyer-dot:hover {
+  background: var(--color-primary, #c5963a);
+  transform: scale(1.2);
+}
+
+/* --- Grille vidéos --- */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.video-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-white, #fff);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-caption {
+  padding: 16px 20px;
+}
+
+.video-caption h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-dark, #1a1a1a);
+  margin: 0;
+}
+
+/* --- Vidéo mise en avant --- */
+.video-featured {
+  position: relative;
+  margin-top: 48px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-white, #fff);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--color-primary, #c5963a);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--color-primary, #c5963a);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(197, 150, 58, 0.4);
+}
+
+.video-featured-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.video-featured-player {
+  padding: 24px;
+  padding-top: 60px;
+}
+
+.video-wrapper-lg {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-featured-details {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-featured-details h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-dark, #1a1a1a);
+  margin: 0 0 24px 0;
+}
+
+.featured-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.featured-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--color-dark, #1a1a1a);
+  line-height: 1.5;
+}
+
+.featured-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.featured-avantages {
+  margin-bottom: 24px;
+}
+
+.featured-avantages h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--color-dark, #1a1a1a);
+}
+
+.featured-avantages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.featured-avantages li {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #444;
+  padding-left: 20px;
+  position: relative;
+}
+
+.featured-avantages li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary, #c5963a);
+  font-weight: 700;
+}
+
+.featured-price {
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(197, 150, 58, 0.08), rgba(197, 150, 58, 0.15));
+  border-radius: 10px;
+  border-left: 4px solid var(--color-primary, #c5963a);
+}
+
+.price-amount {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-primary, #c5963a);
+}
+
+.price-eur {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* --- Responsive tablette --- */
+@media (max-width: 1024px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .video-featured-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .video-featured-player {
+    padding: 20px;
+    padding-top: 56px;
+  }
+
+  .video-featured-details {
+    padding: 24px;
+  }
+
+  .video-featured-details h3 {
+    font-size: 24px;
+  }
+}
+
+/* --- Responsive mobile --- */
+@media (max-width: 768px) {
+  .flyers-carousel {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .flyer-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .flyer-prev {
+    left: 8px;
+  }
+
+  .flyer-next {
+    right: 8px;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .video-featured-details h3 {
+    font-size: 22px;
+  }
+
+  .price-amount {
+    font-size: 22px;
+  }
+
+  .featured-info-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flyer-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .flyers-dots {
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .featured-badge {
+    top: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .video-featured-player {
+    padding: 16px;
+    padding-top: 48px;
+  }
+
+  .video-featured-details {
+    padding: 16px;
+  }
+}
