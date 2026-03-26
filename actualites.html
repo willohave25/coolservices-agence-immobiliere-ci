@@ -15,13 +15,13 @@
   <meta property="og:site_name" content="CSAI — Cool Services Agence Immobilière">
   <meta property="og:title" content="Nos Actualités - Annonces & Vidéos Immobilières | CESAI">
   <meta property="og:description" content="Découvrez les dernières actualités, annonces immobilières et vidéos de l'agence CESAI. Terrains, villas et opportunités en Côte d'Ivoire.">
-  <meta property="og:image" content="https://www.coolservicesagenceimmobiliere-ci.com/images/actualites/flyer1cesai.jpg">
+  <meta property="og:image" content="https://medias.w2k-digital.com/cesai/flyer1cesai.webp">
   <meta property="og:url" content="https://www.coolservicesagenceimmobiliere-ci.com/actualites.html">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nos Actualités - Annonces & Vidéos Immobilières | CESAI">
   <meta name="twitter:description" content="Découvrez les dernières actualités, annonces immobilières et vidéos de l'agence CESAI. Terrains, villas et opportunités en Côte d'Ivoire.">
-  <meta name="twitter:image" content="https://www.coolservicesagenceimmobiliere-ci.com/images/actualites/flyer1cesai.jpg">
+  <meta name="twitter:image" content="https://medias.w2k-digital.com/cesai/flyer1cesai.webp">
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
@@ -121,7 +121,6 @@
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
-        <!-- Fil d'Ariane -->
         <nav class="breadcrumb" aria-label="Fil d'Ariane">
           <a href="index.html">Accueil</a> <span>›</span> <span>Nos Actualités</span>
         </nav>
@@ -131,7 +130,7 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 1 — NOS ANNONCES (Carrousel Flyers) ========== -->
+  <!-- ========== SECTION 1 — NOS ANNONCES (Carrousel dynamique) ========== -->
   <section class="section section-actualites-annonces" data-autoscroll-section>
     <div class="container">
       <div class="section-header reveal">
@@ -141,66 +140,12 @@
         <span class="gold-line"></span>
       </div>
 
-      <!-- Carrousel flyers -->
+      <!-- Carrousel flyers — chargé depuis Supabase -->
       <div class="flyers-carousel reveal" aria-label="Carrousel des annonces immobilières">
-        <div class="flyers-track" id="flyersTrack">
-          <!-- Flyer 1 -->
-          <div class="flyer-slide">
-            <picture>
-              <source srcset="images/actualites/flyer1cesai.webp" type="image/webp">
-              <img src="images/actualites/flyer1cesai.jpg" alt="Annonce immobilière CSAI - Offre terrain Korhogo" loading="lazy" width="600" height="800">
-            </picture>
-          </div>
-          <!-- Flyer 2 -->
-          <div class="flyer-slide">
-            <picture>
-              <source srcset="images/actualites/flyer2cesai.webp" type="image/webp">
-              <img src="images/actualites/flyer2cesai.jpg" alt="Annonce immobilière CSAI - Villa disponible Korhogo" loading="lazy" width="600" height="800">
-            </picture>
-          </div>
-          <!-- Flyer 3 -->
-          <div class="flyer-slide">
-            <picture>
-              <source srcset="images/actualites/flyer3cesai.webp" type="image/webp">
-              <img src="images/actualites/flyer3cesai.jpg" alt="Annonce immobilière CSAI - Lotissement Korhogo" loading="lazy" width="600" height="800">
-            </picture>
-          </div>
-          <!-- Flyer 4 -->
-          <div class="flyer-slide">
-            <picture>
-              <source srcset="images/actualites/flyer4cesai.webp" type="image/webp">
-              <img src="images/actualites/flyer4cesai.jpg" alt="Annonce immobilière CSAI - Terrain viabilisé Korhogo" loading="lazy" width="600" height="800">
-            </picture>
-          </div>
-          <!-- Flyer 5 -->
-          <div class="flyer-slide">
-            <picture>
-              <source srcset="images/actualites/flyer5cesai.webp" type="image/webp">
-              <img src="images/actualites/flyer5cesai.jpg" alt="Annonce immobilière CSAI - Opportunité foncière Côte d'Ivoire" loading="lazy" width="600" height="800">
-            </picture>
-          </div>
-          <!-- Flyer 6 -->
-          <div class="flyer-slide">
-            <picture>
-              <source srcset="images/actualites/flyer6cesai.webp" type="image/webp">
-              <img src="images/actualites/flyer6cesai.jpg" alt="Annonce immobilière CSAI - Investissement immobilier Korhogo" loading="lazy" width="600" height="800">
-            </picture>
-          </div>
-        </div>
-
-        <!-- Navigation carrousel -->
+        <div class="flyers-track" id="flyersTrack"></div>
         <button class="flyer-nav flyer-prev" aria-label="Annonce précédente">&#10094;</button>
         <button class="flyer-nav flyer-next" aria-label="Annonce suivante">&#10095;</button>
-
-        <!-- Dots navigation -->
-        <div class="flyers-dots" id="flyersDots">
-          <button class="flyer-dot active" data-index="0" aria-label="Annonce 1"></button>
-          <button class="flyer-dot" data-index="1" aria-label="Annonce 2"></button>
-          <button class="flyer-dot" data-index="2" aria-label="Annonce 3"></button>
-          <button class="flyer-dot" data-index="3" aria-label="Annonce 4"></button>
-          <button class="flyer-dot" data-index="4" aria-label="Annonce 5"></button>
-          <button class="flyer-dot" data-index="5" aria-label="Annonce 6"></button>
-        </div>
+        <div class="flyers-dots" id="flyersDots"></div>
       </div>
     </div>
   </section>
@@ -215,114 +160,11 @@
         <span class="gold-line"></span>
       </div>
 
-      <!-- Grille vidéos (7 vidéos standard) -->
-      <div class="videos-grid reveal">
-        <!-- Vidéo 1 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video1cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Présentation CSAI</h3>
-          </div>
-        </div>
+      <!-- Grille vidéos — chargée depuis Supabase -->
+      <div class="videos-grid reveal" id="videosGrid"></div>
 
-        <!-- Vidéo 2 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video2cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Visite Terrain</h3>
-          </div>
-        </div>
-
-        <!-- Vidéo 3 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video3cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Nos Réalisations</h3>
-          </div>
-        </div>
-
-        <!-- Vidéo 4 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video4cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Lotissement Korhogo</h3>
-          </div>
-        </div>
-
-        <!-- Vidéo 5 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video5cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Opportunité Foncière</h3>
-          </div>
-        </div>
-
-        <!-- Vidéo 6 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video6cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Bien Immobilier</h3>
-          </div>
-        </div>
-
-        <!-- Vidéo 8 -->
-        <div class="video-card">
-          <div class="video-wrapper">
-            <video controls preload="metadata" loading="lazy" playsinline>
-              <source src="videos/video8cesai.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-caption">
-            <h3>Nouveau Bien</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vidéo 9 — Mise en avant -->
-      <div class="video-featured reveal" id="videoVedette">
-        <div class="featured-badge">À la une</div>
-        <div class="video-featured-inner" style="grid-template-columns:1fr;">
-          <div class="video-featured-player" style="padding-top:60px;">
-            <div class="video-wrapper video-wrapper-lg">
-              <video controls preload="metadata" playsinline>
-                <source src="videos/video9cesai.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture vidéo.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Vidéo vedette — chargée depuis Supabase -->
+      <div id="videoVedetteContainer"></div>
     </div>
   </section>
 
@@ -416,5 +258,98 @@
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/auto-scroll.js"></script>
+
+  <!-- Chargement dynamique depuis Supabase + Cloudflare R2 -->
+  <script>
+  (function() {
+    var SUPABASE_URL = 'https://ilycnutphhmuvaonkrsa.supabase.co';
+    var SUPABASE_KEY = 'sb_publishable_1O960JacjvpleoB-jTqiag_7Ou-4Y0N';
+    var API_URL = SUPABASE_URL + '/rest/v1/cesai_actualites';
+
+    /* Requete API Supabase */
+    function fetchData(params) {
+      var url = API_URL + '?select=*&actif=eq.true&' + params;
+      return fetch(url, {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY
+        }
+      }).then(function(res) { return res.json(); });
+    }
+
+    /* Charger les flyers */
+    function loadFlyers() {
+      fetchData('type=eq.flyer&order=ordre.asc').then(function(flyers) {
+        var track = document.getElementById('flyersTrack');
+        var dotsContainer = document.getElementById('flyersDots');
+        if (!track || !flyers || flyers.length === 0) return;
+
+        var html = '';
+        flyers.forEach(function(flyer) {
+          html += '<div class="flyer-slide">';
+          html += '<img src="' + flyer.fichier_url + '" alt="' + flyer.titre + ' - CSAI Korhogo" loading="lazy" width="600" height="800">';
+          html += '</div>';
+        });
+        track.innerHTML = html;
+
+        var dotsHtml = '';
+        flyers.forEach(function(flyer, i) {
+          dotsHtml += '<button class="flyer-dot' + (i === 0 ? ' active' : '') + '" data-index="' + i + '" aria-label="Annonce ' + (i + 1) + '"></button>';
+        });
+        dotsContainer.innerHTML = dotsHtml;
+
+        initFlyersCarousel();
+      });
+    }
+
+    /* Charger les videos standard */
+    function loadVideos() {
+      fetchData('type=eq.video&vedette=eq.false&order=ordre.asc').then(function(videos) {
+        var grid = document.getElementById('videosGrid');
+        if (!grid || !videos || videos.length === 0) return;
+
+        var html = '';
+        videos.forEach(function(video) {
+          html += '<div class="video-card">';
+          html += '<div class="video-wrapper">';
+          html += '<video controls preload="metadata" loading="lazy" playsinline>';
+          html += '<source src="' + video.fichier_url + '" type="video/mp4">';
+          html += 'Votre navigateur ne supporte pas la lecture vidéo.';
+          html += '</video></div>';
+          html += '<div class="video-caption"><h3>' + video.titre + '</h3></div>';
+          html += '</div>';
+        });
+        grid.innerHTML = html;
+      });
+    }
+
+    /* Charger la video vedette */
+    function loadVedette() {
+      fetchData('type=eq.video&vedette=eq.true&limit=1').then(function(vedettes) {
+        var container = document.getElementById('videoVedetteContainer');
+        if (!container || !vedettes || vedettes.length === 0) return;
+
+        var v = vedettes[0];
+        var html = '<div class="video-featured reveal">';
+        html += '<div class="featured-badge">À la une</div>';
+        html += '<div class="video-featured-inner" style="grid-template-columns:1fr;">';
+        html += '<div class="video-featured-player" style="padding-top:60px;">';
+        html += '<div class="video-wrapper video-wrapper-lg">';
+        html += '<video controls preload="metadata" playsinline>';
+        html += '<source src="' + v.fichier_url + '" type="video/mp4">';
+        html += 'Votre navigateur ne supporte pas la lecture vidéo.';
+        html += '</video></div></div></div></div>';
+        container.innerHTML = html;
+      });
+    }
+
+    /* Lancer le chargement au DOMContentLoaded */
+    document.addEventListener('DOMContentLoaded', function() {
+      loadFlyers();
+      loadVideos();
+      loadVedette();
+    });
+  })();
+  </script>
 </body>
 </html>
