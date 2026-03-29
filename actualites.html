@@ -242,7 +242,7 @@
   <script>
   (function() {
     var SUPABASE_URL = 'https://ilycnutphhmuvaonkrsa.supabase.co';
-    var SUPABASE_KEY = 'sb_publishable_1O960JacjvpleoB-jTqiag_7Ou-4Y0N';
+    var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlseWNudXRwaGhtdXZhb25rcnNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1MjY5NDcsImV4cCI6MjA5MDEwMjk0N30.80ipBwMVvAkC2f0Oz2Wzl8E6GjMwlLCoE72XbePtmnM';
     var API_BASE = SUPABASE_URL + '/rest/v1/cesai_actualites?select=*&actif=eq.true&';
 
     function apiFetch(params, callback) {
@@ -315,18 +315,9 @@
     /* Charger la video vedette */
     apiFetch('type=eq.video&vedette=eq.true&limit=1', function(vedettes) {
       var container = document.getElementById('videoVedetteContainer');
-      if (!container) {
-        console.error('Container videoVedetteContainer introuvable');
-        return;
-      }
-      if (!vedettes || vedettes.length === 0) {
-        console.error('Aucune video vedette trouvee', vedettes);
-        return;
-      }
+      if (!container || !vedettes || vedettes.length === 0) return;
 
       var v = vedettes[0];
-      console.log('Video vedette chargee:', v.titre, v.fichier_url);
-
       var html = '<div class="video-featured" style="margin-top:48px;position:relative;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,0.12);border:2px solid #c5963a;">';
       html += '<div style="position:absolute;top:20px;left:20px;background:#c5963a;color:#fff;padding:8px 20px;border-radius:24px;font-family:Inter,sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;z-index:5;box-shadow:0 4px 12px rgba(197,150,58,0.4);">À la une</div>';
       html += '<div style="padding:60px 24px 24px;">';
@@ -335,9 +326,7 @@
       html += '<source src="' + v.fichier_url + '" type="video/mp4">';
       html += 'Votre navigateur ne supporte pas la lecture vidéo.';
       html += '</video></div></div></div>';
-
       container.innerHTML = html;
-      console.log('Video vedette inseree dans le DOM');
     });
   })();
   </script>
