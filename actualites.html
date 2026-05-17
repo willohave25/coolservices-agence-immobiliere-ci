@@ -238,38 +238,39 @@
   <script src="js/main.js"></script>
   <script src="js/auto-scroll.js"></script>
 
-  <!-- Chargement dynamique Supabase + Cloudflare R2 -->
+  <!-- Chargement dynamique CESAI API -->
   <script>
   (function() {
-    var SUPABASE_URL = 'https://ilycnutphhmuvaonkrsa.supabase.co';
-    var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlseWNudXRwaGhtdXZhb25rcnNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1MjY5NDcsImV4cCI6MjA5MDEwMjk0N30.80ipBwMVvAkC2f0Oz2Wzl8E6GjMwlLCoE72XbePtmnM';
-    var API_BASE = SUPABASE_URL + '/rest/v1/cesai_actualites?select=*&actif=eq.true&';
+    var API_BASE = 'https://api.coolservicesagenceimmobiliere-ci.com/api/actualites';
+    var MEDIA_ROOT = 'https://medias.w2k-digital.com/';
 
     function apiFetch(params, callback) {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', API_BASE + params, true);
-      xhr.setRequestHeader('apikey', SUPABASE_KEY);
-      xhr.setRequestHeader('Authorization', 'Bearer ' + SUPABASE_KEY);
+      xhr.open('GET', API_BASE + (params ? '?' + params : ''), true);
       xhr.onload = function() {
         if (xhr.status === 200) {
           try {
-            var data = JSON.parse(xhr.responseText);
-            callback(data);
+            var res = JSON.parse(xhr.responseText);
+            if (res.success) callback(res.data);
           } catch(e) {
             console.error('Erreur parsing JSON:', e);
           }
         } else {
-          console.error('Erreur API Supabase:', xhr.status, xhr.responseText);
+          console.error('Erreur API CESAI:', xhr.status);
         }
       };
-      xhr.onerror = function() {
-        console.error('Erreur reseau Supabase');
-      };
+      xhr.onerror = function() { console.error('Erreur reseau CESAI API'); };
       xhr.send();
     }
 
+    function mediaUrl(fichier_url) {
+      if (!fichier_url) return '';
+      if (fichier_url.startsWith('http')) return fichier_url;
+      return MEDIA_ROOT + fichier_url;
+    }
+
     /* Charger les flyers */
-    apiFetch('type=eq.flyer&order=ordre.asc', function(flyers) {
+    apiFetch('type=flyer', function(flyers) {
       var track = document.getElementById('flyersTrack');
       var dotsContainer = document.getElementById('flyersDots');
       if (!track || !flyers || flyers.length === 0) return;
@@ -277,7 +278,7 @@
       var html = '';
       for (var i = 0; i < flyers.length; i++) {
         html += '<div class="flyer-slide">';
-        html += '<img src="' + flyers[i].fichier_url + '" alt="' + flyers[i].titre + ' - CSAI Korhogo" loading="lazy" width="600" height="800">';
+        html += '<img src="' + mediaUrl(flyers[i].fichier_url) + '" alt="' + flyers[i].titre + ' - CSAI Korhogo" loading="lazy" width="600" height="800">';
         html += '</div>';
       }
       track.innerHTML = html;
@@ -294,7 +295,7 @@
     });
 
     /* Charger les videos standard */
-    apiFetch('type=eq.video&vedette=eq.false&order=ordre.asc', function(videos) {
+    apiFetch('type=video&vedette=false', function(videos) {
       var grid = document.getElementById('videosGrid');
       if (!grid || !videos || videos.length === 0) return;
 
@@ -303,7 +304,7 @@
         html += '<div class="video-card">';
         html += '<div class="video-wrapper">';
         html += '<video controls preload="metadata" playsinline>';
-        html += '<source src="' + videos[i].fichier_url + '" type="video/mp4">';
+        html += '<source src="' + mediaUrl(videos[i].fichier_url) + '" type="video/mp4">';
         html += 'Votre navigateur ne supporte pas la lecture vidéo.';
         html += '</video></div>';
         html += '<div class="video-caption"><h3>' + videos[i].titre + '</h3></div>';
@@ -313,7 +314,7 @@
     });
 
     /* Charger la video vedette */
-    apiFetch('type=eq.video&vedette=eq.true&limit=1', function(vedettes) {
+    apiFetch('type=video&vedette=true&limit=1', function(vedettes) {
       var container = document.getElementById('videoVedetteContainer');
       if (!container || !vedettes || vedettes.length === 0) return;
 
@@ -323,7 +324,7 @@
       html += '<div style="padding:60px 24px 24px;">';
       html += '<div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000;">';
       html += '<video controls preload="metadata" playsinline style="width:100%;height:100%;object-fit:cover;display:block;">';
-      html += '<source src="' + v.fichier_url + '" type="video/mp4">';
+      html += '<source src="' + mediaUrl(v.fichier_url) + '" type="video/mp4">';
       html += 'Votre navigateur ne supporte pas la lecture vidéo.';
       html += '</video></div></div></div>';
       container.innerHTML = html;
