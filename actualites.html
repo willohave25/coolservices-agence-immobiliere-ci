@@ -284,8 +284,15 @@
 
       var html = '';
       for (var i = 0; i < flyers.length; i++) {
+        var f = flyers[i];
         html += '<div class="flyer-slide">';
-        html += '<img src="' + mediaUrl(flyers[i].fichier_url) + '" alt="' + flyers[i].titre + ' - CSAI Korhogo" loading="lazy">';
+        html += '<img src="' + mediaUrl(f.fichier_url) + '" alt="' + f.titre + ' - CSAI Korhogo" loading="lazy">';
+        if (f.description) {
+          html += '<div class="flyer-desc">';
+          html += '<h3>' + f.titre + '</h3>';
+          html += '<p>' + f.description.replace(/\n/g, '<br>') + '</p>';
+          html += '</div>';
+        }
         html += '</div>';
       }
       track.innerHTML = html;
