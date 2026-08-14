@@ -278,12 +278,14 @@
     apiFetch('type=flyer', function(flyers) {
       var track = document.getElementById('flyersTrack');
       var dotsContainer = document.getElementById('flyersDots');
-      if (!track || !flyers || flyers.length === 0) return;
+      if (!track) { console.error('CESAI: #flyersTrack introuvable'); return; }
+      if (!flyers || flyers.length === 0) { console.warn('CESAI: aucun flyer'); return; }
+      console.log('CESAI: ' + flyers.length + ' flyers charges');
 
       var html = '';
       for (var i = 0; i < flyers.length; i++) {
         html += '<div class="flyer-slide">';
-        html += '<img src="' + mediaUrl(flyers[i].fichier_url) + '" alt="' + flyers[i].titre + ' - CSAI Korhogo" loading="lazy" width="600" height="800">';
+        html += '<img src="' + mediaUrl(flyers[i].fichier_url) + '" alt="' + flyers[i].titre + ' - CSAI Korhogo" loading="lazy">';
         html += '</div>';
       }
       track.innerHTML = html;
@@ -293,6 +295,12 @@
         dotsHtml += '<button class="flyer-dot' + (j === 0 ? ' active' : '') + '" data-index="' + j + '" aria-label="Annonce ' + (j + 1) + '"></button>';
       }
       dotsContainer.innerHTML = dotsHtml;
+
+      /* Forcer la visibilite du carousel */
+      var carousel = track.closest('.flyers-carousel');
+      if (carousel) { carousel.classList.add('visible'); carousel.style.opacity = '1'; carousel.style.transform = 'none'; }
+      var section = track.closest('.reveal');
+      if (section) { section.classList.add('visible'); }
 
       if (typeof initFlyersCarousel === 'function') {
         initFlyersCarousel();
