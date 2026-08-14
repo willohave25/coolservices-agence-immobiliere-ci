@@ -2322,6 +2322,28 @@ p {
   object-fit: contain;
 }
 
+.flyer-desc {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  padding: 20px 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.flyer-desc h3 {
+  color: #c5963a;
+  font-size: 17px;
+  margin: 0 0 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.flyer-desc p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
 /* Flèches navigation carrousel */
 .flyer-nav {
   position: absolute;
