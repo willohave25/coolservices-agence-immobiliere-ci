@@ -268,6 +268,8 @@
       xhr.send();
     }
 
+    function esc(v) { return String(v == null ? '' : v).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
     function mediaUrl(fichier_url) {
       if (!fichier_url) return '';
       if (fichier_url.startsWith('http')) return fichier_url;
@@ -286,11 +288,11 @@
       for (var i = 0; i < flyers.length; i++) {
         var f = flyers[i];
         html += '<div class="flyer-slide">';
-        html += '<img src="' + mediaUrl(f.fichier_url) + '" alt="' + f.titre + ' - CSAI Korhogo" loading="lazy">';
+        html += '<img src="' + esc(mediaUrl(f.fichier_url)) + '" alt="' + esc(f.titre) + ' - CSAI Korhogo" loading="lazy">';
         if (f.description) {
           html += '<div class="flyer-desc">';
-          html += '<h3>' + f.titre + '</h3>';
-          html += '<p>' + f.description.replace(/\n/g, '<br>') + '</p>';
+          html += '<h3>' + esc(f.titre) + '</h3>';
+          html += '<p>' + esc(f.description).replace(/\n/g, '<br>') + '</p>';
           html += '</div>';
         }
         html += '</div>';
@@ -324,10 +326,10 @@
         html += '<div class="video-card">';
         html += '<div class="video-wrapper">';
         html += '<video controls preload="metadata" playsinline>';
-        html += '<source src="' + mediaUrl(videos[i].fichier_url) + '" type="video/mp4">';
+        html += '<source src="' + esc(mediaUrl(videos[i].fichier_url)) + '" type="video/mp4">';
         html += 'Votre navigateur ne supporte pas la lecture vidéo.';
         html += '</video></div>';
-        html += '<div class="video-caption"><h3>' + videos[i].titre + '</h3></div>';
+        html += '<div class="video-caption"><h3>' + esc(videos[i].titre) + '</h3></div>';
         html += '</div>';
       }
       grid.innerHTML = html;
@@ -344,7 +346,7 @@
       html += '<div style="padding:60px 24px 24px;">';
       html += '<div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000;">';
       html += '<video controls preload="metadata" playsinline style="width:100%;height:100%;object-fit:cover;display:block;">';
-      html += '<source src="' + mediaUrl(v.fichier_url) + '" type="video/mp4">';
+      html += '<source src="' + esc(mediaUrl(v.fichier_url)) + '" type="video/mp4">';
       html += 'Votre navigateur ne supporte pas la lecture vidéo.';
       html += '</video></div></div></div>';
       container.innerHTML = html;
