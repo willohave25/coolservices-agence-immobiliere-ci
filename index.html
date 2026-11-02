@@ -194,7 +194,7 @@
     </div>
     <script>
     (function(){
-      var API='https://api.coolservicesagenceimmobiliere-ci.com/api/actualites?limit=4';
+      var API='https://api.coolservicesagenceimmobiliere-ci.com/api/actualites';
       var MEDIA='https://api.coolservicesagenceimmobiliere-ci.com/uploads/';
       function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
       function url(u){return !u?'':(/^https?:/.test(u)?u:MEDIA+u);}
@@ -215,7 +215,7 @@
           var r=JSON.parse(xhr.responseText);
           var d=(r&&r.success&&r.data)||[];
           if(!d.length)return;
-          d.sort(function(a,b){return (b.vedette?1:0)-(a.vedette?1:0);});
+          d.sort(function(a,b){return ((b.vedette?1:0)-(a.vedette?1:0))||(new Date(b.created_at)-new Date(a.created_at));});d=d.slice(0,4);
           var h=item(d[0],'une-main');
           if(d.length>1){h+='<div class="une-side">';for(var i=1;i<d.length;i++)h+=item(d[i],'une-card');h+='</div>';}
           else document.getElementById('uneGrid').style.gridTemplateColumns='1fr';

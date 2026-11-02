@@ -282,6 +282,7 @@
       var dotsContainer = document.getElementById('flyersDots');
       if (!track) { console.error('CESAI: #flyersTrack introuvable'); return; }
       if (!flyers || flyers.length === 0) { console.warn('CESAI: aucun flyer'); return; }
+      flyers = flyers.slice().sort(function(a,b){ return (b.vedette?1:0)-(a.vedette?1:0); });
       console.log('CESAI: ' + flyers.length + ' flyers charges');
 
       var html = '';
